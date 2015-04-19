@@ -68,7 +68,7 @@ public abstract class Player {
     }
     
     /**
-     * Make an istance of a Move that was just made and pass it 
+     * Make an instance of a Move that was just made and pass it 
      * to theRules by calling its validateMove method.
      *
      * @param start The starting spot of the move.  The legal 

@@ -24,7 +24,7 @@ import java.awt.*;
  */
 public class Board {
 
-   private Piece pieces[]; // the pieces that are on the board
+   private Piece board[]; // the board
    public static int SINGLE = 0;
    public static int KING = 1;
 
@@ -38,35 +38,35 @@ public class Board {
 	   // create a array of size 64, generate piece objects and
 	   // put them in the correct location in the array
 	   // Set the values of numWhites and numBlues to 12 each
-	   pieces = new Piece[64];
+	   board = new Piece[64];
 
 	   // create blue pices
-	   pieces[1] = new SinglePiece( Color.blue );
-	   pieces[3] = new SinglePiece( Color.blue );
-	   pieces[5] = new SinglePiece( Color.blue );
-	   pieces[7] = new SinglePiece( Color.blue );
-	   pieces[8] = new SinglePiece( Color.blue );
-	   pieces[10] = new SinglePiece( Color.blue );
-	   pieces[12] = new SinglePiece( Color.blue );
-	   pieces[14] = new SinglePiece( Color.blue );
-	   pieces[17] = new SinglePiece( Color.blue );
-	   pieces[19] = new SinglePiece( Color.blue );
-	   pieces[21] = new SinglePiece( Color.blue );
-	   pieces[23] = new SinglePiece( Color.blue );
+	   board[1] = new SinglePiece( Color.blue );
+	   board[3] = new SinglePiece( Color.blue );
+	   board[5] = new SinglePiece( Color.blue );
+	   board[7] = new SinglePiece( Color.blue );
+	   board[8] = new SinglePiece( Color.blue );
+	   board[10] = new SinglePiece( Color.blue );
+	   board[12] = new SinglePiece( Color.blue );
+	   board[14] = new SinglePiece( Color.blue );
+	   board[17] = new SinglePiece( Color.blue );
+	   board[19] = new SinglePiece( Color.blue );
+	   board[21] = new SinglePiece( Color.blue );
+	   board[23] = new SinglePiece( Color.blue );
 
 	   // create the white pieces
-	   pieces[40] = new SinglePiece( Color.white );
-	   pieces[42] = new SinglePiece( Color.white );
-	   pieces[44] = new SinglePiece( Color.white );
-	   pieces[46] = new SinglePiece( Color.white );
-	   pieces[49] = new SinglePiece( Color.white );
-	   pieces[51] = new SinglePiece( Color.white );
-	   pieces[53] = new SinglePiece( Color.white );
-	   pieces[55] = new SinglePiece( Color.white );
-	   pieces[56] = new SinglePiece( Color.white );
-	   pieces[58] = new SinglePiece( Color.white );
-	   pieces[60] = new SinglePiece( Color.white );
-	   pieces[62] = new SinglePiece( Color.white );
+	   board[40] = new SinglePiece( Color.white );
+	   board[42] = new SinglePiece( Color.white );
+	   board[44] = new SinglePiece( Color.white );
+	   board[46] = new SinglePiece( Color.white );
+	   board[49] = new SinglePiece( Color.white );
+	   board[51] = new SinglePiece( Color.white );
+	   board[53] = new SinglePiece( Color.white );
+	   board[55] = new SinglePiece( Color.white );
+	   board[56] = new SinglePiece( Color.white );
+	   board[58] = new SinglePiece( Color.white );
+	   board[60] = new SinglePiece( Color.white );
+	   board[62] = new SinglePiece( Color.white );
 
    }
 
@@ -97,8 +97,8 @@ public class Board {
 	   // that was at the start positon before
 	   } else {
 	   	
-		   pieces[end] = pieces[start];
-		   pieces[start] = null;
+		   board[end] = board[start];
+		   board[start] = null;
 
 
 	   }
@@ -126,7 +126,7 @@ public class Board {
 	   // if it's outside the bounds of the array,
 	   	   // return true
            
-	   if ( space >= 1 && space <= 63 && pieces[space] == null ) {
+	   if ( space >= 1 && space <= 63 && board[space] == null ) {
 	   	   returnValue = false;
 	   }
 	   
@@ -145,7 +145,7 @@ public class Board {
 	   // go to the space position in the array
 	   // set it equal to null
 	   
-	   pieces[ space ] = null;
+	   board[ space ] = null;
 
    }
    
@@ -160,9 +160,9 @@ public class Board {
 	   // create a new king piece
 	   // go to the space position in the array and place it there
 	   // if the position is not ocupied
-	   Color color = pieces[space].getColor();
+	   Color color = board[space].getColor();
 	   Piece piece = new KingPiece( color );
-	   pieces[space] = piece;
+	   board[space] = piece;
 	   
    }
    
@@ -184,7 +184,7 @@ public class Board {
 	   
 	   if( occupied( space ) ) {
 		   
-		   returnValue = pieces[space].getColor();
+		   returnValue = board[space].getColor();
 		   
 	   }
    
@@ -211,7 +211,7 @@ public class Board {
 	   
 	      if( occupied(  space ) ) {
 		   
-	   	   	   returnValue = pieces[space];
+	   	   	   returnValue = board[space];
                            
 	   	   }
 	   
@@ -245,13 +245,13 @@ public class Board {
 	   // go through the whole array
 	   // if there is a piece of color in the arrar return true
 	   // else return false
-	   for( int i =1; i < pieces.length; i++ ) {
+	   for( int i =1; i < board.length; i++ ) {
 		   
-	   	   if( pieces[i] != null && pieces[i].getColor() == color ) {
+	   	   if( board[i] != null && board[i].getColor() == color ) {
 
                   
 	   	   	   	   returnValue = true;
-	   	   	   	   i = pieces.length;
+	   	   	   	   i = board.length;
 	   	   	   }
 	   }
 
@@ -283,8 +283,8 @@ public class Board {
       
       for ( int i = 0; i < 64; i++ ) {
           if ( occupied( i ) ) {
-              if ( pieces[ i ].getColor() == Color.blue ) {
-                  bluePieces.addElement( pieces[ i ] );
+              if ( board[ i ].getColor() == Color.blue ) {
+                  bluePieces.addElement( board[ i ] );
               }
           }                 
       }
@@ -305,8 +305,8 @@ public class Board {
       
       for ( int i = 0; i < 64; i++ ) {
           if ( occupied( i ) ) {
-              if ( pieces[ i ].getColor() == Color.white ) {
-                  whitePieces.addElement( pieces[ i ] );
+              if ( board[ i ].getColor() == Color.white ) {
+                  whitePieces.addElement( board[ i ] );
               }
           }                 
       }
