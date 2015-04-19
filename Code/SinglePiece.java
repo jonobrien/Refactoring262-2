@@ -31,8 +31,6 @@ public class SinglePiece extends Piece {
     * This constructor creates a single piece checker object
     * 
     * @param c - the color of this single piece
-    * @param pc - the possible captures of this single piece
-    * @param pm - the possible moves of this single piece
     */
    public SinglePiece( Color c  ) {
  

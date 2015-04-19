@@ -296,7 +296,7 @@ public class Facade extends Component {
     /**
      * Set the game mode: a local game or a network game
      * 
-     * @param the mode of the game
+     * @param mode - the mode of the game
      * 
      * @pre we are in the setup for a game
      * 

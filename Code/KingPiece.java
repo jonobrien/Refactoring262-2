@@ -28,8 +28,6 @@ public class KingPiece extends Piece {
     * This constructor creates a king piece object
     * 
     * @param c - the color of this king piece
-    * @param pc - the possible captures of this king piece
-    * @param pm - the possible moves of this king piece
     */
    public KingPiece( Color c ) {
    

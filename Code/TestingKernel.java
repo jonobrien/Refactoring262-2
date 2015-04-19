@@ -68,7 +68,7 @@ public class TestingKernel extends java.lang.Object{
     /**
      * The constructor for this kernel which calls the other methods.
      *
-     * @param aFacade The facade to manipulate in this program.
+     * @param aDriver - The facade to manipulate in this program.
      */
     public TestingKernel( Driver aDriver ){
         //testFacade = aFacade;

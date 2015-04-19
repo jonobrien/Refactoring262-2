@@ -188,7 +188,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
         jButton3 = new JButton();
 	possibleSquares.add(jButton3);
         jButton3.addActionListener( this );
-	
+
         jButton4 = new JButton();
 	possibleSquares.add(jButton4);
         jButton4.addActionListener( this );
@@ -1142,7 +1142,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
      * 
      * Exit the Application
      * 
-     * @param the window event
+     * @param evt - the window event
      * 
      */
     private void exitForm(java.awt.event.WindowEvent evt) {
@@ -1243,9 +1243,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
      * Updates the GUI reading the pieces in the board
      * Puts pieces in correct spaces, updates whos turn it is
      *
-     * @param the board
      */
-    
     private void update(){
 	
 	
