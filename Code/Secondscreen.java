@@ -269,7 +269,7 @@ public class Secondscreen extends JFrame
      * This takes care of when an action takes place. It will check the 
      * action command of all components and then deicde what needs to be done.
      * 
-     * @param the event fired
+     * @param e - the event fired
      */
     
     public void actionPerformed( ActionEvent e ){

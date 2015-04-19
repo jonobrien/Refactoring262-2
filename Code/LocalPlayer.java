@@ -105,7 +105,7 @@ public class LocalPlayer extends Player {
      * players to notify them of this with a message.  Implementation 
      * differs for local player and network player.
      *
-     * @param endMessage  Message indicating the end of the game.
+     * @param player -  the player that is being informed of the game ending in draw.
      */
     public void endInDraw( Player player ){
 	

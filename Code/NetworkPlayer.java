@@ -159,7 +159,6 @@ public class NetworkPlayer extends Player {
    /**
     * This method establishes a connection to the host
     *
-    * @param host - the host to connect to
     *
     * @pre the host specified exists
     * @post connection to the host has been established
@@ -597,8 +596,6 @@ public class NetworkPlayer extends Player {
     
    /**
     * The move is sent to the remote player
-    *
-    * @param move - move that was made by the local player
     *
     * @pre move is a legal move
     * @post the move is sent to the network player
