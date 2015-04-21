@@ -32,7 +32,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     //the facade for the game
     
     private static Facade theFacade; //the facade
-    private Vector possibleSquares = new Vector();//a vector of the squares
+    private Vector<JButton> possibleSquares = new Vector<JButton>();//a vector of the squares
     private int timeRemaining;//the time remaining
     
     private JButton jButton1;
@@ -1273,13 +1273,8 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			//show a blue single piece in that spot board
 			temp = (JButton)possibleSquares.get(i);
 
-			//get the picture from the web
-			try{
-			    temp.setIcon(
-			      new ImageIcon( new URL("file:BlueSingle.gif") ));
-			}catch( MalformedURLException e ){
-			    System.out.println(e.getMessage());
-			}
+			temp.setIcon(
+			  new ImageIcon(CheckerGUI.class.getResource("BlueSingle.gif") ));
 
 			//if there is a kinged piece there
 		    }else if((board.getPieceAt(i)).getType() == board.KING ){
@@ -1290,7 +1285,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			//get the picture formt the web
 			try{
 			    temp.setIcon(
-			      new ImageIcon(new URL("file:BlueKing.gif") ) );
+			      new ImageIcon(CheckerGUI.class.getResource("BlueKing.gif") ) );
 			}catch( Exception e ){}
 			
 		    }
@@ -1307,7 +1302,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			//get the picture from the web
 			try{
 			    temp.setIcon(
-			      new ImageIcon(new URL("file:WhiteSingle.gif")));
+			      new ImageIcon(CheckerGUI.class.getResource("WhiteSingle.gif")));
 			}catch( Exception e ){}
 			
 			//if there is a kinged piece there
@@ -1319,7 +1314,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			//get the picture from the web
 			try{
 			    temp.setIcon(
-			      new ImageIcon(new URL("file:WhiteKing.gif") ) );
+			      new ImageIcon(CheckerGUI.class.getResource("WhiteKing.gif") ) );
 			}catch( Exception e ){}
 		    }
                                 //if there isnt a piece there        
