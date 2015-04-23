@@ -191,9 +191,17 @@ public class CheckerGUI extends JFrame implements ActionListener
 	 */
 	private void initComponents()
 	{
+		int gridx = 0;
+		int gridy = 1;
+		int gridxCount = 0;
+		int gridyCount = 0;
+		int MAXX = 8;
+		int MAXY = 9;
 
+		
+				
 		this.setResizable(false);
-
+		/*
 		jButton1 = new JButton();
 		possibleSquares.add(jButton1);
 		jButton1.addActionListener(this);
@@ -449,7 +457,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 		jButton64 = new JButton();
 		possibleSquares.add(jButton64);
 		jButton64.addActionListener(this);
-
+		*/
+		
 		PlayerOnelabel = new JLabel();
 		playerTwoLabel = new JLabel();
 		whosTurnLabel = new JLabel();
@@ -476,7 +485,66 @@ public class CheckerGUI extends JFrame implements ActionListener
 				exitForm(evt);
 			}
 		});
+		Color dark = new Color(204, 204, 153);
+		for (int i = 0; i<64;i++)
+		{
+			JButton button = new JButton();
+			possibleSquares.add(button);
+			button.addActionListener(this);
+			
+			button.setPreferredSize(new java.awt.Dimension(80, 80));
+			button.setActionCommand(Integer.toString(i));
+			if (gridy % 2 == 0)
+			{
+				if (gridx % 2 == 1)
+				{
+					button.setBackground(Color.white);
+				} else
+				{
+					button.setBackground(dark);
+				}
+				
+			} else
+			{
+				if (gridx % 2 == 0)
+				{
+					button.setBackground(Color.white);
+				} else
+				{
+					button.setBackground(dark);
+				}
+			}
+			
 
+			gridBagConstraints1 = new java.awt.GridBagConstraints();
+			gridBagConstraints1.gridx = gridx;
+			gridBagConstraints1.gridy = gridy;
+			getContentPane().add(button, gridBagConstraints1);
+
+			System.out.println("**********");
+			System.out.println("button "+ (i + 1));
+			System.out.println("gridx1 "+ gridx);
+			System.out.println("gridy1 "+ gridy);
+			/*
+			 * increment gridx until 8 spaces filled, and then reset gridx to zero, then 
+			 * increment gridy by 1 for next column.
+			 */
+			gridx += 1;
+			gridxCount += 1;
+			if (gridx == MAXX && gridxCount == MAXX) {
+				gridx = 0;
+				gridxCount = 0;
+				gridy +=1;
+				gridyCount += 1;
+				
+			}
+			if (gridy == MAXY && gridyCount == MAXY) {
+				gridy = 0;
+				gridyCount = 0;
+			}
+		}
+		
+		/*
 		jButton1.setPreferredSize(new Dimension(80, 80));
 		jButton1.setActionCommand("0");
 		jButton1.setBackground(Color.white);
@@ -1052,7 +1120,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 		gridBagConstraints1.gridx = 7;
 		gridBagConstraints1.gridy = 8;
 		getContentPane().add(jButton64, gridBagConstraints1);
-
+		*/
+		
 		PlayerOnelabel.setText("Player 1:     " + playerOnesName);
 		PlayerOnelabel.setForeground(Color.black);
 
