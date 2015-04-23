@@ -38,6 +38,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 																	// squares
 	private int timeRemaining;// the time remaining
 
+	private ArrayList<String> test;
+	
 	private JButton jButton1;
 	private JButton jButton2;
 	private JButton jButton3;
@@ -485,15 +487,21 @@ public class CheckerGUI extends JFrame implements ActionListener
 				exitForm(evt);
 			}
 		});
+		
 		Color dark = new Color(204, 204, 153);
-		for (int i = 0; i<64;i++)
+		test = new ArrayList<String>();
+		System.out.println("The size of the test ArrayList is: " + test.size());
+		for (int i = 0; i < 64; i++)
 		{
 			JButton button = new JButton();
 			possibleSquares.add(button);
 			button.addActionListener(this);
 			
 			button.setPreferredSize(new java.awt.Dimension(80, 80));
-			button.setActionCommand(Integer.toString(i));
+			String index = Integer.toString(i);
+			button.setActionCommand(index);
+			
+			
 			if (gridy % 2 == 0)
 			{
 				if (gridx % 2 == 1)
@@ -502,6 +510,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 				} else
 				{
 					button.setBackground(dark);
+					test.add(index);
+					System.out.println(index + " has been added to test.");
 				}
 				
 			} else
@@ -512,8 +522,11 @@ public class CheckerGUI extends JFrame implements ActionListener
 				} else
 				{
 					button.setBackground(dark);
+					test.add(index);
+					System.out.println(index + " has been added to test.");
 				}
 			}
+			System.out.println("The size of the test ArrayList is: " + test.size());
 			
 
 			gridBagConstraints1 = new java.awt.GridBagConstraints();
@@ -1215,6 +1228,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 		try
 		{
 			// if a square gets clicked
+			
+			/*
 			if (e.getActionCommand().equals("1")
 					|| e.getActionCommand().equals("3")
 					|| e.getActionCommand().equals("5")
@@ -1247,6 +1262,8 @@ public class CheckerGUI extends JFrame implements ActionListener
 					|| e.getActionCommand().equals("58")
 					|| e.getActionCommand().equals("60")
 					|| e.getActionCommand().equals("62"))
+			*/
+			if (test.contains(e.getActionCommand()))
 			{
 
 				// call selectSpace with the button pressed
