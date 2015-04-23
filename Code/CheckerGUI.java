@@ -30,15 +30,22 @@ import java.net.*;
 public class CheckerGUI extends JFrame implements ActionListener
 {
 
-	// the facade for the game
+	/**
+	 * The facade of the game
+	 */
+	private static Facade theFacade; 
+	
+	/**
+	 * Vector of the possible spots on the board
+	 */
+	private Vector<JButton> possibleSquares = new Vector<JButton>();
+																	
+	/**
+	 * The time remaining
+	 */
+	private int timeRemaining;
 
-	private static Facade theFacade; // the facade
-	private Vector<JButton> possibleSquares = new Vector<JButton>();// a vector
-																	// of the
-																	// squares
-	private int timeRemaining;// the time remaining
-
-	private ArrayList<String> test;
+	private ArrayList<String> validSpots;
 	
 	
 	private JLabel PlayerOnelabel;
@@ -130,6 +137,10 @@ public class CheckerGUI extends JFrame implements ActionListener
 	 */
 	private void initComponents()
 	{
+		/*
+		 * constants defined for setting the x/y coordinates
+		 * of the grid of the board 
+		 */
 		int gridx = 0;
 		int gridy = 1;
 		int gridxCount = 0;
@@ -169,8 +180,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 		});
 		
 		Color dark = new Color(204, 204, 153);
-		test = new ArrayList<String>();
-		System.out.println("The size of the test ArrayList is: " + test.size());
+		validSpots = new ArrayList<String>();
 		for (int i = 0; i < 64; i++)
 		{
 			JButton button = new JButton();
@@ -193,8 +203,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 				} else
 				{
 					button.setBackground(dark);
-					test.add(index);
-					System.out.println(index + " has been added to test.");
+					validSpots.add(index);
 				}
 				
 			} else
@@ -205,11 +214,9 @@ public class CheckerGUI extends JFrame implements ActionListener
 				} else
 				{
 					button.setBackground(dark);
-					test.add(index);
-					System.out.println(index + " has been added to test.");
+					validSpots.add(index);
 				}
 			}
-			System.out.println("The size of the test ArrayList is: " + test.size());
 			
 
 			gridBagConstraints1 = new java.awt.GridBagConstraints();
@@ -311,8 +318,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 	 * 
 	 * Exit the Application
 	 * 
-	 * @param the
-	 *            window event
+	 * @param evt - the exit button is clicked, calling the window event
 	 * 
 	 */
 	private void exitForm(java.awt.event.WindowEvent evt)
@@ -322,10 +328,9 @@ public class CheckerGUI extends JFrame implements ActionListener
 	}
 
 	/**
-	 * Takes care of input from users, handles any actions performed
+	 * Takes care of input from users, handles any action performed
 	 * 
-	 * @param e
-	 *            the event that has occured
+	 * @param e - the event that has occurred
 	 */
 
 	public void actionPerformed(ActionEvent e)
@@ -334,7 +339,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 		try
 		{
 			// if a valid space with a piece on it is clicked
-			if (test.contains(e.getActionCommand()))
+			if (validSpots.contains(e.getActionCommand()))
 			{
 
 				// call selectSpace with the button pressed
@@ -380,29 +385,28 @@ public class CheckerGUI extends JFrame implements ActionListener
 		}
 		catch (NumberFormatException excep)
 		{
-			System.err
-					.println("GUI exception: Error converting a string to a number");
+			System.err.println("GUI exception: Error converting "
+					+ "a string to a number");
 		}
 		catch (NullPointerException exception)
 		{
-			System.err.println("GUI exception: Null pointerException "
-					+ exception.getMessage());
+			System.err.println("GUI exception: Null pointerException " 
+		+ exception.getMessage());
 			exception.printStackTrace();
 		}
 		catch (Exception except)
 		{
-			System.err.println("GUI exception: other: " + except.getMessage());
+			System.err.println("GUI exception: other: " 
+		+ except.getMessage());
 			except.printStackTrace();
 		}
-
 	}
 
 	/**
 	 * Updates the GUI reading the pieces in the board Puts pieces in correct
-	 * spaces, updates whos turn it is
+	 * spaces, updates whose turn it is
 	 * 
-	 * @param the
-	 *            board
+	 * @param board calls it
 	 */
 
 	private void update()
@@ -460,7 +464,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 
 					}
 
-					// check to see if the color is white
+				// check to see if the color is white
 				}
 				else if (board.colorAt(i) == Color.white)
 				{
@@ -482,7 +486,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 						{
 						}
 
-						// if there is a kinged piece there
+					// if there is a kinged piece there
 					}
 					else if ((board.getPieceAt(i)).getType() == board.KING)
 					{
