@@ -671,7 +671,7 @@ public class Rules
 
 	}
 
-	/*
+	/**
 	 * Validate a regular, non jumping move.
 	 * 
 	 * @param piecePosition - the starting piece position.
@@ -755,7 +755,7 @@ public class Rules
 
 	}
 
-	/*
+	/**
 	 * Check for regular (non-jumping) moves and add them to a Vector.
 	 * 
 	 * @param piecePosition - the beginning position of the piece.
@@ -832,7 +832,7 @@ public class Rules
 
 	}
 
-	/*
+	/**
 	 * Fill the vectors that contain wall pieces.
 	 * 
 	 * @pre The vectors are empty.
@@ -853,7 +853,7 @@ public class Rules
 
 	}
 
-	/*
+	/**
 	 * This method will check the available moves for pieces if the piece is on
 	 * the left or right walls.
 	 * 
@@ -1122,7 +1122,7 @@ public class Rules
 
 	}
 
-	/*
+	/**
 	 * Will check if a single piece needs to be kinged.
 	 * 
 	 * @param end - the piece position.
