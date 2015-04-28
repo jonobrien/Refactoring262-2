@@ -285,10 +285,10 @@ public class Board
 	 * 
 	 * @return blue pieces on the board
 	 */
-	public Vector bluePieces()
+	public Vector<Piece> bluePieces()
 	{
 
-		Vector bluePieces = new Vector();
+		Vector<Piece> bluePieces = new Vector<Piece>();
 
 		for (int i = 0; i < 64; i++)
 		{
@@ -310,10 +310,10 @@ public class Board
 	 * 
 	 * @return white pieces on the board
 	 */
-	public Vector whitePieces()
+	public Vector<Piece> whitePieces()
 	{
 
-		Vector whitePieces = new Vector();
+		Vector<Piece> whitePieces = new Vector<Piece>();
 
 		for (int i = 0; i < 64; i++)
 		{
