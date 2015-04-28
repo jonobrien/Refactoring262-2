@@ -72,7 +72,6 @@ public class CheckerGUI extends JFrame implements ActionListener
 	 *            the second players name
 	 * 
 	 */
-
 	public CheckerGUI(Facade facade, String name1, String name2)
 	{
 
@@ -109,10 +108,9 @@ public class CheckerGUI extends JFrame implements ActionListener
 		// updateTime();
 	}
 
-	/*
+	/**
 	 * This method handles setting up the timer
 	 */
-
 	private void register()
 	{
 
@@ -205,7 +203,6 @@ public class CheckerGUI extends JFrame implements ActionListener
 					button.setBackground(dark);
 					validSpots.add(index);
 				}
-				
 			} else
 			{
 				if (gridx % 2 == 0)
@@ -224,10 +221,10 @@ public class CheckerGUI extends JFrame implements ActionListener
 			gridBagConstraints1.gridy = gridy;
 			getContentPane().add(button, gridBagConstraints1);
 
-			System.out.println("**********");
+			System.out.println("**************************");
 			System.out.println("button "+ (i + 1));
-			System.out.println("gridx1 "+ gridx);
-			System.out.println("gridy1 "+ gridy);
+			System.out.println("gridx" + (i+1) + ": " + gridx);
+			System.out.println("gridy" + (i+1) + ": " + gridy);
 			/*
 			 * increment gridx until 8 spaces filled, and then reset gridx to zero, then 
 			 * increment gridy by 1 for next column.
@@ -324,7 +321,6 @@ public class CheckerGUI extends JFrame implements ActionListener
 	private void exitForm(java.awt.event.WindowEvent evt)
 	{
 		theFacade.pressQuit();
-
 	}
 
 	/**
@@ -332,7 +328,6 @@ public class CheckerGUI extends JFrame implements ActionListener
 	 * 
 	 * @param e - the event that has occurred
 	 */
-
 	public void actionPerformed(ActionEvent e)
 	{
 
