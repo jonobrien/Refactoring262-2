@@ -168,7 +168,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 		
 		Color dark = new Color(204, 204, 153);
 		test = new ArrayList<String>();
-		System.out.println("The size of the test ArrayList is: " + test.size());
+		//System.out.println("The size of the test ArrayList is: " + test.size());
 		for (int i = 0; i < 64; i++)
 		{
 			JButton button = new JButton();
@@ -192,7 +192,7 @@ public class CheckerGUI extends JFrame implements ActionListener
 				{
 					button.setBackground(dark);
 					test.add(index);
-					System.out.println(index + " has been added to test.");
+					//System.out.println(index + " has been added to test.");
 				}
 			} else
 			{
@@ -203,10 +203,10 @@ public class CheckerGUI extends JFrame implements ActionListener
 				{
 					button.setBackground(dark);
 					test.add(index);
-					System.out.println(index + " has been added to test.");
+					//System.out.println(index + " has been added to test.");
 				}
 			}
-			System.out.println("The size of the test ArrayList is: " + test.size());
+			//System.out.println("The size of the test ArrayList is: " + test.size());
 			
 
 			gridBagConstraints1 = new java.awt.GridBagConstraints();
@@ -214,10 +214,12 @@ public class CheckerGUI extends JFrame implements ActionListener
 			gridBagConstraints1.gridy = gridy;
 			getContentPane().add(button, gridBagConstraints1);
 
-			System.out.println("**************************");
-			System.out.println("button "+ (i + 1));
-			System.out.println("gridx" + (i+1) + ": " + gridx);
-			System.out.println("gridy" + (i+1) + ": " + gridy);
+			//System.out.println("**************************");
+			//System.out.println("button "+ (i + 1));
+			//System.out.println("gridx" + (i+1) + ": " + gridx);
+			//System.out.println("gridy" + (i+1) + ": " + gridy);
+			
+			
 			/*
 			 * increment gridx until 8 spaces filled, and then reset gridx to zero, then 
 			 * increment gridy by 1 for next column.
