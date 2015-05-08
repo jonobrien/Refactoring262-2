@@ -13,7 +13,9 @@
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
 import java.net.*;
 
 /**
@@ -38,6 +40,7 @@ public class Facade extends Component
 	public Board theBoard;
 	public Player passivePlayer;
 	public Player activePlayer;
+	public CheckerGUI GUI;
 
 	private int startSpace = 99; // Starting space for current move
 	private int endSpace = 99; // Ending space for current move
@@ -179,6 +182,8 @@ public class Facade extends Component
 		// Alert players and the kernel that one person
 		// has quit calls quitGame() for both players
 		theDriver.endInQuit(activePlayer);
+		System.out.println("pressQuit");
+		PlayCheckers.restart();
 
 	}
 
@@ -191,6 +196,7 @@ public class Facade extends Component
 		// Alerts both players and the kernel that one person
 		// has offered a draw calls offerDraw() on both players
 		activePlayer.offerDraw(activePlayer);
+		
 
 	}
 
@@ -203,6 +209,8 @@ public class Facade extends Component
 
 		// calls acceptDraw() in teh driver
 		theDriver.endInDraw(activePlayer);
+		
+
 	}
 
 	/**
@@ -427,6 +435,15 @@ public class Facade extends Component
 	{
 		// Return the board so GUI can go through and update itself
 		return theBoard;
+	}
+	
+	public void makeGUI(Facade F1, String Player1, String Player2) {
+		GUI = new CheckerGUI(F1, Player1, Player2);
+		GUI.setVisible(true);
+	}
+	
+	public CheckerGUI getGUI() {
+		return this.GUI;
 	}
 
 	/**

@@ -29,6 +29,8 @@
  */
 class PlayCheckers
 {
+	static Firstscreen first;
+	static Driver theDriver;
 
 	/*
 	 * The main method to play checkers
@@ -38,12 +40,29 @@ class PlayCheckers
 
 	public static void main(String args[])
 	{
-
-		Driver theDriver = new Driver();
-
-		Firstscreen first = new Firstscreen(theDriver.getFacade());
+		playCheckers();
+		
+		
+	}
+	public static void playCheckers() {
+		theDriver = new Driver();
+		System.out.println("PLAYCHECKERS");
+		first = new Firstscreen(theDriver.getFacade());
 		first.show();
-
+	}
+	
+	/**
+	 * hide old gui and reset to first screen
+	 */
+	public static void restart() {
+		if (theDriver.getFacade().getGUI() instanceof CheckerGUI) {
+			theDriver.getFacade().getGUI().setVisible(false);
+		}
+		Driver restartDriver = new Driver();
+		theDriver = restartDriver;
+		Firstscreen restartFirst = new Firstscreen(restartDriver.getFacade());
+		first = restartFirst;
+		first.show();
 	}
 
 }// PlayCheckers

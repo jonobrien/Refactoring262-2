@@ -96,9 +96,6 @@ public class LocalPlayer extends Player
 
 		JOptionPane.showMessageDialog(null, "Game has ended because: "
 				+ endMessage, "Game Over", JOptionPane.INFORMATION_MESSAGE);
-
-		System.exit(0);
-
 	}
 
 	/**
@@ -119,7 +116,8 @@ public class LocalPlayer extends Player
 				+ " accepted a draw." + "\n\nClick OK to end the program.",
 				"Game Over", JOptionPane.INFORMATION_MESSAGE);
 
-		System.exit(0);
+		
+		
 	}
 
 }// LocalPlayer.java

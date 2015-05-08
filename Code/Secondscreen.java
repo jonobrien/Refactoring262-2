@@ -44,6 +44,8 @@ public class Secondscreen extends JFrame implements ActionListener,
 	private JButton cancelButton;
 	private JSlider turnLengthField;
 	private JSlider warningLengthField;
+	private CheckerGUI GUI;
+	
 
 	// End of variables declaration
 
@@ -67,6 +69,7 @@ public class Secondscreen extends JFrame implements ActionListener,
 		theFacade = f;
 		theFirst = first;
 		gameType = type;
+		
 
 		initComponents();
 		pack();
@@ -349,9 +352,8 @@ public class Secondscreen extends JFrame implements ActionListener,
 				theFacade.startGame();
 				// hide this screen, make and show the GUI
 				this.hide();
-				CheckerGUI GUI = new CheckerGUI(theFacade,
-						theFacade.getPlayerName(1), theFacade.getPlayerName(2));
-				GUI.show();
+				theFacade.makeGUI(theFacade, theFacade.getPlayerName(1), theFacade.getPlayerName(2));
+				
 
 				// if they hit cancel go to the previous screen
 			}
@@ -384,6 +386,10 @@ public class Secondscreen extends JFrame implements ActionListener,
 		}
 
 	}// end of actionPerformed
+	
+	public CheckerGUI getGUI() {
+		return GUI;
+	}
 
 	/**
 	 * 
@@ -396,6 +402,7 @@ public class Secondscreen extends JFrame implements ActionListener,
 
 	private void exitForm(java.awt.event.WindowEvent evt)
 	{
+		System.out.println("exited secondScreen");
 		System.exit(0);
 	}
 

@@ -13,6 +13,7 @@
 
 import java.awt.*;
 import java.net.*;
+
 import javax.swing.*;
 
 /**
@@ -39,6 +40,7 @@ public class Driver
 	private Timer theTimer;
 	private Facade theFacade;
 	private Rules theRules;
+	private Board theBoard;
 
 	/**
 	 * Constructor
@@ -48,7 +50,7 @@ public class Driver
 	public Driver()
 	{
 		// Create the board
-		Board theBoard = new Board();
+		theBoard = new Board();
 
 		// Create the rules passing in the board
 		theRules = new Rules(theBoard, this);
@@ -65,6 +67,10 @@ public class Driver
 	public Facade getFacade()
 	{
 		return theFacade;
+	}
+	
+	public Board getBoard() {
+		return theBoard;
 	}
 
 	/**
@@ -160,10 +166,8 @@ public class Driver
 		// Call endOfGame on both players with the given message
 		playerOne.endOfGame(message);
 		playerTwo.endOfGame(message);
-
-		// When players have acknowledged the end of game
-		// call System.exit()
-		System.exit(0);
+		
+		PlayCheckers.restart();
 	}
 
 	/**
@@ -256,6 +260,8 @@ public class Driver
 		// Calls endOfGame with a message that game ended in a draw.
 		endGame(player.getName() + "'s draw offer was accepted. \n\n"
 				+ "Game ended in a draw.");
+		
+		
 	}
 
 	/**
