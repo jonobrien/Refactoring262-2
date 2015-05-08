@@ -46,7 +46,6 @@ class PlayCheckers
 	}
 	public static void playCheckers() {
 		theDriver = new Driver();
-		System.out.println("PLAYCHECKERS");
 		first = new Firstscreen(theDriver.getFacade());
 		first.show();
 	}

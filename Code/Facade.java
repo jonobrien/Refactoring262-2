@@ -182,7 +182,6 @@ public class Facade extends Component
 		// Alert players and the kernel that one person
 		// has quit calls quitGame() for both players
 		theDriver.endInQuit(activePlayer);
-		System.out.println("pressQuit");
 		PlayCheckers.restart();
 
 	}

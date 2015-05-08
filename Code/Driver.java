@@ -69,9 +69,7 @@ public class Driver
 		return theFacade;
 	}
 	
-	public Board getBoard() {
-		return theBoard;
-	}
+	
 
 	/**
 	 * This method is called after a move has been checked. Changes active
