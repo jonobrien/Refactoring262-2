@@ -44,6 +44,11 @@ class PlayCheckers
 		
 		
 	}
+	
+	/**
+	 * This method runs the game, calls the screens to seed
+	 * initial settings and data for use by the Driver
+	 */
 	public static void playCheckers() {
 		theDriver = new Driver();
 		first = new Firstscreen(theDriver.getFacade());
@@ -51,7 +56,10 @@ class PlayCheckers
 	}
 	
 	/**
-	 * hide old gui and reset to first screen
+	 * This method hides the old game, and then resets the game to run
+	 * again, at the completion of the game via any condition to
+	 * normally exit the system. 
+	 * - Maintains the same functionality as per the original design
 	 */
 	public static void restart() {
 		if (theDriver.getFacade().getGUI() instanceof CheckerGUI) {
