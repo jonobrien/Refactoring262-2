@@ -1,0 +1,209 @@
+
+Jon_2@JON_OB /c/Users/Jon_2/Documents/Git/swen262/Refactoring262-2 (master)
+$ git log
+commit 7b7523289b4e19ce54d1680c2395be4df68ad0e1
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Fri May 8 22:12:36 2015 -0400
+
+    added Jar file used for submission
+
+commit 0b030ac2f4d59df19339a50ff5695b01d2aed301
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Fri May 8 22:02:01 2015 -0400
+
+    added comments to PlayCheckers.restart method
+
+commit ee7bb89dac646234cefba8d893948751fbd153cf
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Fri May 8 19:16:52 2015 -0400
+
+    removed prints
+
+commit a06957b426da84cc9e1c924264f925481c12514a
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Fri May 8 19:10:54 2015 -0400
+
+    added game restart functionality
+
+commit 44b63949c8cb48f1a400e33835a8dc60251961bc
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Mon May 4 15:02:30 2015 -0400
+
+    commented prints in checkerGUI
+
+commit 16e34f8bc851769cfc0094330f0f244b7b685d43
+Author: HuseenMK <hjm3628@rit.edu>
+Date:   Sun May 3 15:56:33 2015 -0400
+
+    Revert "better formatting, method definitions, naming of variables"
+
+    This reverts commit 84183430496f68677a905f2b41709a999a323b40.
+
+commit 7d3acd6139da53d73587dc4cf6c6bbf7901c1259
+Merge: 25dfc39 6ca3197
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Tue Apr 28 11:49:26 2015 -0400
+
+    Merge branch 'master' of https://github.com/amc9732/Refactoring262-2
+
+commit 25dfc39e34f0fabef1fcef5fef7fc798d93a5b31
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Tue Apr 28 11:45:56 2015 -0400
+
+    set type of Vector to 'Piece' instead of generic
+
+commit 6ca3197a728c30e9cb4882c34de2b0c7c67c5691
+Author: HuseenMK <hjm3628@rit.edu>
+Date:   Tue Apr 21 11:48:21 2015 -0400
+
+    Text File
+
+commit 6e05939aaa8076abd9197d6b4a342f8e59852211
+Merge: 8fa1656 3c014d4
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Sun Apr 26 15:18:10 2015 -0400
+
+    Merge branch 'master' of https://github.com/amc9732/Refactoring262-2
+
+commit 8fa16565618c76c9fb1b9d634caa73ed30206789
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Sun Apr 26 15:17:10 2015 -0400
+
+    Modified comments and print statements.
+
+commit 3c014d4221d625b5f37ca3d59c593ff775e00396
+Merge: 8418343 ebdccb7
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Thu Apr 23 14:17:47 2015 -0400
+
+    Merge branch 'master' of https://github.com/amc9732/Refactoring262-2
+
+commit 84183430496f68677a905f2b41709a999a323b40
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Thu Apr 23 14:15:39 2015 -0400
+
+    better formatting, method definitions, naming of variables
+
+commit ebdccb74abdcf8401244c5f322435d0a08e7d05b
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 14:00:41 2015 -0400
+
+    Edited Test_Branch.txt.
+
+commit 0b5e72e92ef6522dc99aa510fa7c46be19a04b81
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Thu Apr 23 13:08:31 2015 -0400
+
+    Fixed redundant code, added a few comments in ActionPerformed()
+
+commit 5163b492974e639b214e596766baf54bf1dc4927
+Merge: 2f9fbc6 2ba9ed0
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 12:49:51 2015 -0400
+
+    Reduced redundancy in CheckerGUI class. Redundant code is commented.
+
+commit 2ba9ed0f648bc7e3759f746b83e55368b779a305
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 12:41:49 2015 -0400
+
+    At line 1232: Condensed if block down by using test ArrayList.
+
+commit 320efc844056b583bc5e4d227e86346dcc02efac
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 12:01:27 2015 -0400
+
+    Now using for loop to set up buttons for game board.
+
+commit 2f9fbc6a899db87e33e79f39ef4a825b30cb0a5d
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 11:29:44 2015 -0400
+
+    Small edits to comment formatting.
+
+commit 3077d76de576cff6885dd623a2768be803226710
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Thu Apr 23 11:28:00 2015 -0400
+
+    testing branch commit.
+
+commit 54bd056e2d9b21b0e07d523b69540f4aa880c69f
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Tue Apr 21 19:43:35 2015 -0400
+
+    Reformatted code for readability.
+
+commit b25ea041e7083b9e7952cfa96f236d2946a3b120
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Tue Apr 21 18:32:34 2015 -0400
+
+    Fixed problem where checkers pieces do not show up. Fixed warnings in Checke
+
+commit 412ef2d41adf16b81294d9afd88f34ba2b64eb10
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Tue Apr 21 12:13:48 2015 -0400
+
+    Resetting code for metrics activity.
+
+commit de1efec6660554374b9b51354deb7b4bd6bced6f
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Tue Apr 21 12:02:49 2015 -0400
+
+    Reseting code for metrics.
+
+commit 7f6e3e28f31bb3670d7207ec6fc957ec78e8461f
+Merge: 727b5d6 0cca14c
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Tue Apr 21 11:58:19 2015 -0400
+
+    Merge branch 'master' of https://github.com/amc9732/Refactoring262-2
+
+commit 0cca14c373bcd8dc42e7ec6416c17a0aafe41330
+Author: amc9732 <amc9732@rit.edu>
+Date:   Sun Apr 19 17:03:15 2015 -0400
+
+    Deleted .idea folder
+     Please enter the commit message for your changes. Lines starting
+
+commit 727b5d6670eb01cfdb2422cd44b5bb130b04ce97
+Merge: 79beac2 c8d3980
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Sun Apr 19 16:37:03 2015 -0400
+
+    Merge branch 'master' of https://github.com/amc9732/Refactoring262-2
+
+commit 79beac2edfbe67847c9e2ab840f5749219ef7c02
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Sun Apr 19 16:36:18 2015 -0400
+
+    Minor Changes.
+
+commit c8d3980f52f7e74d99ad920a1ddde7f7e57ecbdc
+Author: Jon O'Brien <jvo7822@rit.edu>
+Date:   Sun Apr 19 16:27:15 2015 -0400
+
+    testing commit
+
+commit d75cc500c0c041dafd9eaa953a0c48b48a7c8b13
+Author: amc9732 <amc9732@rit.edu>
+Date:   Sun Apr 19 16:19:43 2015 -0400
+
+    Now has PDFs
+
+commit adaa75d97a67af9bc2225cd0bbaa4ce656802b84
+Author: amc9732 <amc9732@rit.edu>
+Date:   Sun Apr 19 16:06:13 2015 -0400
+
+    Fixed incorrect @param tags in all files
+
+commit aaac467df26a47679ed4d11c4ef23a5d38ae5347
+Author: Joshua Berk <jmb2636@rit.edu>
+Date:   Sun Apr 19 15:28:17 2015 -0400
+
+    Committing code and documentation.
+
+commit 25a90d08b2c4f779ccdc2915559e5a29896e8a76
+Author: amc9732 <amc9732@rit.edu>
+Date:   Sun Apr 19 15:16:57 2015 -0400
+
+    Initial commit
